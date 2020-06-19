@@ -4,6 +4,7 @@ import styled, { keyframes, ThemeProvider } from 'styled-components';
 import { Button } from './components/Button';
 import { theme_one, theme_two } from './theme/themes';
 import ThemeSelect  from './components/ThemeSelect';
+import UikitC from './components/UikitC';
 
 const AppWrapper = styled.div`
   text-align: center;
@@ -15,7 +16,7 @@ const rotate360 = keyframes`
   to {
     transform: rotate(360deg);
   }
-`
+`;
 
 const AppLogo = styled.img`
   animation: ${rotate360} infinite 10s linear;
@@ -23,7 +24,8 @@ const AppLogo = styled.img`
   &:hover{
     animation: ${rotate360} infinite 1s linear;
   }
-`
+`;
+
 const AppHeader = styled.div`
   background-color: ${props => props.theme.primary};
   height: 150px;
@@ -66,6 +68,7 @@ function App() {
 
       <ThemeSelect handleThemeChange={handleThemeChange}/>
     </AppWrapper>
+    <UikitC/>
     </ThemeProvider>
    
   );
